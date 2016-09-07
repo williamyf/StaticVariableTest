@@ -1,7 +1,8 @@
 #pragma once
+#include "dllexport.h"
 #include <iostream>
 
-class mysingleton
+class PUBFUN_EXPORT mysingleton
 {
 public:
 	static mysingleton& ins() {
@@ -21,5 +22,3 @@ private:
 
 	int _count;
 };
-
-mysingleton mysingleton::_ins;

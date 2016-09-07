@@ -18,6 +18,9 @@
     <ClInclude Include="mysingleton.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="dllexport.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mysingleton.cpp">

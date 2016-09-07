@@ -146,6 +146,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="dllexport.h" />
     <ClInclude Include="mysingleton.h" />
   </ItemGroup>
   <ItemGroup>
