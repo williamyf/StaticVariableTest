@@ -147,9 +147,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="dllexport.h" />
+    <ClInclude Include="Mgr.h" />
     <ClInclude Include="mysingleton.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Mgr.cpp" />
     <ClCompile Include="mysingleton.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

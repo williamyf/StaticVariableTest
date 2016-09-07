@@ -21,9 +21,15 @@
     <ClInclude Include="dllexport.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Mgr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="mysingleton.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Mgr.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
