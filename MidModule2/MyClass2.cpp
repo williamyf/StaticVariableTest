@@ -15,4 +15,4 @@ MyClass2::~MyClass2()
 	//std::cout << _name << ": destroying..." << std::endl;
 }
 
-MyClass2 g_mycls2("g_mycls2");
+//MyClass2 g_mycls2("g_mycls2");

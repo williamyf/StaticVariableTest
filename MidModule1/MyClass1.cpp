@@ -13,4 +13,4 @@ MyClass1::~MyClass1()
 {
 }
 
-MyClass1 g_mycls1("g_mycls1");
+//MyClass1 g_mycls1("g_mycls1");

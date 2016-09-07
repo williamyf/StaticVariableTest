@@ -6,6 +6,7 @@ class PUBFUN_EXPORT mysingleton
 {
 public:
 	static mysingleton& ins() {
+		static mysingleton _ins;
 		return _ins;
 	}
 	void increase() { _count++; }
@@ -18,7 +19,5 @@ private:
 	~mysingleton() {
 		std::cout << "destroying mysingleton..." << std::endl;
 	}
-	static mysingleton _ins;
-
 	int _count;
 };
