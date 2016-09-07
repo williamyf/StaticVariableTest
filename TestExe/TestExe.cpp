@@ -14,6 +14,7 @@ int main()
 	MyClass2 mycls2("mycls2");
 	std::cout <<"in main(): myMgr::ins()->count()="<< myMgr::ins()->count() << std::endl << std::endl;
 	std::cout << "leave main()." << std::endl;
+
     return 0;
 }
 
