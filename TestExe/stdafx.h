@@ -11,5 +11,5 @@
 #include <tchar.h>
 
 
-
+//#define BOOST_ALL_DYN_LINK
 // TODO:  在此处引用程序需要的其他头文件
