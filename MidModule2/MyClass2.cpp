@@ -4,8 +4,8 @@
 
 MyClass2::MyClass2(const std::string &name):_name(name)
 {
-	myMgr::ins()->increase();
-	std::cout << "MyClass2(" << _name << "): constructing. myMgr::ins()->count()=" << myMgr::ins()->count() << std::endl;
+	Mgr::ins()->increase();
+	std::cout << "MyClass2(" << _name << "): constructing. Mgr::ins()->count()=" << Mgr::ins()->count() << std::endl;
 }
 
 
@@ -15,4 +15,4 @@ MyClass2::~MyClass2()
 	//std::cout << _name << ": destroying..." << std::endl;
 }
 
-MyClass2 g_mycls2("g_mycls2");
+//MyClass2 g_mycls2("g_mycls2");

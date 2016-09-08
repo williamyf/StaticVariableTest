@@ -4,41 +4,37 @@
 #include <thread>
 #include <mutex>
 
+extern PUBFUN_EXPORT std::mutex g_mut;
+
 template <class T>
 class mysingleton
 {
 public:
 	static T* ins();
-private:
+protected:
 	mysingleton() {
 		std::cout << "constructing mysingleton..." << std::endl;
 	}
 	~mysingleton() {
 		std::cout << "destroying mysingleton..." << std::endl;
 	}
-	static std::mutex _mut;
-	static std::auto_ptr<T> _ins;
 };
-
-template <class T>
-std::auto_ptr<T> mysingleton<T>::_ins;
-
-template <class T>
-std::mutex mysingleton<T>::_mut;
 
 template <class T>
 T* mysingleton<T>::ins()
 {
-	if (0 == _ins.get())
+	static T* pIns = 0;
+	if (0 == pIns)
 	{
-		//std::lock_guard<std::mutex> lock(_mut);
-		if (0 == _ins.get())
+		std::lock_guard<std::mutex> lock(g_mut);		
+		if (0 == pIns)
 		{
-			_ins.reset(new T());
+			static T _ins;
+			pIns = &_ins;
 		}
 	}
-	return _ins.get();
+	return pIns;
 }
 
-#define SINGLETONCLASS(class_name)	friend class mysingleton<class_name>; friend class std::auto_ptr<class_name>;
+#define SINGLETONCLASS(class_name)	friend class mysingleton<class_name>; friend class std::shared_ptr<class_name>; friend class std::_Ref_count<class_name>;
 #define USESINGLETONCLASS(class_name)	typedef mysingleton<class_name> my##class_name;

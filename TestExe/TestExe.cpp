@@ -9,10 +9,11 @@
 
 int main()
 {
+	//Mgr mgr;
 	std::cout << "enter main()." << std::endl << std::endl;
 	MyClass1 mycls1("mycls1");
 	MyClass2 mycls2("mycls2");
-	std::cout <<"in main(): myMgr::ins()->count()="<< myMgr::ins()->count() << std::endl << std::endl;
+	std::cout <<"in main(): Mgr::ins()->count()="<< Mgr::ins()->count() << std::endl << std::endl;
 	std::cout << "leave main()." << std::endl;
 
     return 0;
@@ -20,17 +21,17 @@ int main()
 
 // execute results:
 // constructing Mgr...
-// MyClass1(g_mycls1) : constructing.myMgr::ins()->count() = 1
+// MyClass1(g_mycls1) : constructing.Mgr::ins()->count() = 1
 // constructing Mgr...
-// MyClass2(g_mycls2) : constructing.myMgr::ins()->count() = 1
+// MyClass2(g_mycls2) : constructing.Mgr::ins()->count() = 1
 // enter main().
 // 
 // constructing Mgr...
-// MyClass1(mycls1) : constructing.myMgr::ins()->count() = 1
+// MyClass1(mycls1) : constructing.Mgr::ins()->count() = 1
 // constructing Mgr...
-// MyClass2(mycls2) : constructing.myMgr::ins()->count() = 1
+// MyClass2(mycls2) : constructing.Mgr::ins()->count() = 1
 // constructing Mgr...
-// in main() : myMgr::ins()->count() = 0
+// in main() : Mgr::ins()->count() = 0
 // 
 // leave main().
 // destorying Mgr...
