@@ -16,10 +16,15 @@ int main()
 	MyClass1 mycls1("mycls1");
 	MyClass2 mycls2("mycls2");
 	
+	Mgr2::ins()->increase();
+	myMgr3::ins()->increase();
+	std::cout << std::endl << Mgr2::ins()->count() << std::endl;
+	std::cout << std::endl << myMgr3::ins()->count() << std::endl;
+
 	//std::cout << "in main(): MgrAgent::get_mutable_instance().count()=" << MgrAgent::get_mutable_instance().count() << std::endl << std::endl;
 	//std::cout << "in main(): MgrAgent::instance().count()=" << MgrAgent::instance().count() << std::endl << std::endl;
 	
-	MyClassTest<ttt>::ins().do_nothing();
+	//MyClassTest<ttt>::ins().do_nothing();
 
 	//GetInstance  类静态变量默认是0
 	//g_int 全局变量默认是100 
